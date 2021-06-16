@@ -1,4 +1,9 @@
-# SBCL
+# SBCL(Steel Bank Common Lisp)脚本启动笔记
+
+作者：安静1337
+
+链接：https://www.jianshu.com/p/dfebe7b299cd
+
 Steel Bank Common Lisp
 
 当sbcl以脚本形式(sbcl --script)运行，它不会加载任何额外文件。当我们的脚本中有其他依赖时，就会变得很棘手。以下，以我自己实际经验(一个签到的小功能)介绍怎么配置sbcl的脚本环境。
@@ -10,7 +15,7 @@ sign.lisp:
 (require :cl-163-music)
 
 (multiple-value-bind (res0 res1)
- (cl-163-music:daily-sign "username" "password")
+ (cl-163-music:daily-sign "hehe@sbcl.com" "sbwy")
  (format t "~A ~% ~A ~%" res0 res1))
 然后用shell调用sbcl加载sign.lisp
 
@@ -44,7 +49,6 @@ See also:
 
 ps：缺点就是镜像文件太大了，大约50多MB。
 
-作者：安静1337
-链接：https://www.jianshu.com/p/dfebe7b299cd
+
 来源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
